@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Acceleo: features</title> 
+    <meta name="description" content="Acceleo, an open source code generator."> 
+    <meta name="author" content="St&eacute;phane B&eacute;gaudeau">
+    
+    <!-- styles --> 
+    <link href="../assets/css/bootstrap/bootstrap-1.1.1.css" rel="stylesheet">
+    <link href="../assets/css/prettify/prettify.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/slider/coda-slider-2.0.css" type="text/css" media="screen" />
+    <link href="../assets/css/acceleo.css" rel="stylesheet">
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- javascript --> 
+    <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script> 
+    <script src="http://autobahn.tablesorter.com/jquery.tablesorter.min.js"></script> 
+    <script src="../assets/js/prettify/prettify.js"></script>
+    <script src="../assets/js/jquery/jquery.easing.1.3.js"></script>
+	<script src="../assets/js/slider/jquery.coda-slider-2.0.js"></script>
+	<script src="../assets/js/acceleo.js"></script>
+ 
+    <!-- icons --> 
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+  <body>
+  
+    <!-- Topbar --> 
+    <div class="topbar"> 
+      <div class="fill"> 
+        <div class="container"> 
+          <h3><a href="../index.html">Acceleo</a></h3> <!-- Acceleo logo -->
+          <ul> 
+            <li class="active"><a href="../features/index.html">Features</a></li>
+            <li><a href="../documentation/index.html">Documentation</a></li>
+            <li><a href="../tutorials/index.html">Tutorials</a></li>
+            <li><a href="../community/index.html">Community</a></li>
+            <li><a href="../download/index.html">Download</a></li>
+            <li><a href="../contribute/index.html">Contribute</a></li>
+            <li><a href="../support/index.html">Support</a></li>
+            <li><a href="../premium/index.html">Premium</a></li>
+          </ul>
+          <ul class="nav secondary-nav">
+            <li class="menu">
+              <a href="#" class="menu">Eclipse</a>
+              <ul class="menu-dropdown">
+                <li><a href="#">Eclipse Home</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Eclipse Marketplace</a></li>
+                <li><a href="#">Eclipse Live</a></li>
+                <li><a href="#">Eclipse Bugzilla</a></li>
+                <li><a href="#">Eclipse Forums</a></li>
+                <li><a href="#">Planet Eclipse</a></li>
+                <li><a href="#">Eclipse Wiki</a></li>
+                <li><a href="#">My Foundation Portal</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div> 
+      </div> 
+    </div> 
+    <!-- Topbar -->
+    
+    <!-- Top banner -->
+    <section id="banner">
+      <div class="banner">
+        <div class="coda-slider-wrapper">
+          <div class="coda-slider preload" id="coda-slider-1">
+            <div class="panel">
+              <div class="panel-wrapper">
+                <h2 class="title">Panel 1</h2>
+                <p>First slide.</p>
+              </div>
+            </div>
+            
+            <div class="panel">
+              <div class="panel-wrapper">
+                <h2 class="title">Panel 2</h2>
+                <p>Second slide.</p>
+              </div>
+            </div>
+            
+            <div class="panel">
+              <div class="panel-wrapper">
+                <h2 class="title">Panel 3</h2>
+                <p>Third slide.</p>
+              </div>
+            </div>
+            
+            <div class="panel">
+              <div class="panel-wrapper">
+                <h2 class="title">Panel 4</h2>
+                <p>Fourth slide.</p>
+              </div>
+            </div>
+            
+            <div class="panel">
+              <div class="panel-wrapper">
+                <h2 class="title">Panel 5</h2>
+                <p>Fifth slide.</p>
+              </div>
+            </div>
+          </div><!-- .coda-slider -->
+        </div><!-- .coda-slider-wrapper -->
+      </div>
+    </section>
+    <!-- Top banner -->
+    
+    <!-- Container -->
+    <div class="container">
+    
+      <!-- Acceleo features overview -->
+      <section id="acceleo-features-overview">
+        <div class="page-header">
+          <h1>Overview: <small>seemless integration within Eclipse.</small></h1>
+        </div>
+        <div class="row">
+          <div class="span6 columns">
+            <p>Acceleo is a kickass tool for code generation</p>
+          </div>
+          <div class="span6 columns">
+            <p>Editor with syntax highlighting, code completion, real time error detection...</p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo features overview -->
+      
+      <!-- MOFM2T -->
+      <section id="mofm2t">
+        <div class="page-header">
+          <h1>Implementation of MOFM2T: <small>the OMG's standard language dedicated to code generation.</small></h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>MOFM2T</h2>
+            <p>This template based language is an OMG's standard dedicated to code generation.</p>
+          </div>
+          <div class="span12 columns">
+            <h4>Architecture of an Acceleo module: <small>to build your generator steps after steps.</small></h4>
+            <p>
+              An Acceleo module is composed of two major elements:
+              <ul>
+                <li>Templates, used to generate static and dynamic part of the text.</li>
+                <li>Queries, used to encapsulate some complex requests on the element of the models.</li>
+              </ul>
+              On the following screenshot, you can have a look at the basic elements contained in an Acceleo generator.
+            </p>
+            
+            <div class="poi-image-div">
+              <img src="../assets/images/features/module.png" class="poi-image"/>
+              <ul>
+                <li class="poi-data" data='{"id": 1, "caption": "Metamodel used in the module", "pos": {"x": 480, "y": 135}}'></li>
+                <li class="poi-data" data='{"id": 2, "caption": "Import of another module", "pos": {"x": 640, "y": 165}}'></li>
+              </ul>
+            </div>
+            
+            <h4>Templates: <small>the core of the generator.</small></h4>
+            <p>
+              The template is used to generate most of the code. It can contain static area of text and dynamic parts in which expressions will use the element of the
+              input model to compute the text to generate. Those expressions are based on a superset of the OMG's standard OCL language. Acceleo uses EMF to add
+              new operations dedicated to the simplification of the manipulation of models.
+            </p>
+            
+            <h4>Queries: <small>utility operations.</small></h4>
+            <p>
+              Queries can be used to encapsulate an expression in order to use it at several places of your generator easily. Queries have also their result stored in 
+              cache by default (it can be changed in the preferences of Acceleo) and as such you can use a well placed query to boost the performances of your generator 
+              by en capsulating a time consuming operation in a query.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- MOFM2T -->
+      
+      <!-- Acceleo editor -->
+      <section id="acceleo-editor">
+        <div class="page-header">
+          <h1>Editor</h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Syntax highlighting</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The Acceleo editor comes with syntax highlighting for Acceleo modules. The syntax highlighting allows the user to easily identify the elements of the 
+              generator (templates and queries) and the expressions used.
+            </p>
+            
+            <p>
+              The syntax highlighting of the Acceleo editor is fully customizable thanks to a dedicated preference menu.
+            </p>
+            
+            <div class="poi-image-div">
+              <a href="../assets/images/features/syntax-highlighting.png"><img src="../assets/images/features/syntax-highlighting_th.png" class="poi-image"/></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Code completion</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The Acceleo editor provides a code completion mechanism. This mechanism can be used to easily create modules, templates and queries and the different structures
+              of the generator (for, if, let) but it also provides code completion for model elements.
+            </p>
+            
+            <p>
+              The code completion inside of an expression will display the attributes and operations available on the model elements and it will also show the templates and queries
+              that can be applied on this element.
+            </p>
+            
+            <div class="poi-image-div">
+              <img src="../assets/images/features/completion.png" class="poi-image"/>
+            </div>
+            
+            <p>
+              The code completion can also be customized thanks to an extension point, for more information see the generation pattern view.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Errors detection</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The Acceleo editor features a real time errors detection mechanism. Thanks to the static typing of Acceleo module, you can see the errors directly in the editor prior
+              the launch of any generation.
+            </p>
+            
+            <p>
+              This errors detection system will not only detect malformed modules with, for example, trivial mistake like missing parenthesis but it will also detect errors in the
+              expressions. This system will help you to easily maintain your generator.
+            </p>
+            
+            <div class="poi-image-div">
+              <a href="../assets/images/features/error-marker.png"><img src="../assets/images/features/error-marker_th.png" class="poi-image"/></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Bad practices detection</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              With the introduction of Acceleo 3.1, a new system has been introduced to detect bad practices in the Acceleo editor. A warning will now mark potential source of errors
+              in Acceleo modules.
+            </p>
+            
+            <div class="poi-image-div">
+              <a href="../assets/images/features/bad-practices.png"><img src="../assets/images/features/bad-practices_th.png" class="poi-image"/></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Quick fixes</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The Acceleo editor contains also a mechanism to quickly fix trivial errors. Using the standard Eclipse mechanism, you can easily create a template to fix a call to an
+              unknown operation.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Refactoring</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              Modern editors offer support for refactoring operations and the Acceleo editors obey to this rule with several refactoring options.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Search</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              Looking for something? The Acceleo editor uses the standard Eclipse search mechanism to let you find quickly all the occurrences of an element. You can easily find,
+              for example, where a selected template is used.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Open declaration</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              With the open declaration mechanism, you can easily open a selected template from a template invocation expression. You can thus easily navigate in your module.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Documentation</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              With Acceleo 3.1, Acceleo modules can now contain documentation. This documentation is visible in the completion and in hover popup in the editor.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Code collapse</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              While editing a big Acceleo module, you can use the code collapsing system to mask portion of the generator in order to focus on a specific part of
+              your module.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Quick replacement</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              If you start with a static block of texte, you can quickly replace several occurrences of a same piece of text by an Acceleo expression in a click.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo editor -->
+      
+      <!-- Acceleo profiler -->
+      <section id="acceleo-profiler">
+        <div class="page-header">
+          <h1>Profiler</h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Profiling</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              When you are launching your Acceleo generator, you can use the Acceleo profiler to easily figure out the instructions used during the generation and
+              the time spent in each of those instructions. With the profiler, you can determine the bottlenecks in your generator and then you can wisely find
+              where your generator needs improvements.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo profiler -->
+      
+      <!-- Acceleo debugger -->
+      <section id="acceleo-debugger">
+        <div class="page-header">
+          <h1>Debugger</h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Debug</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              If you encounter a bug in your generator, you can use the Acceleo debugger to easily find your problem. Set a breakpoint, launch your generation
+              and then move step by steps while keeping an eye on the state of all the variable in the context of the current expression to easily determine the
+              source of your problem.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo debugger -->
+      
+      <!-- Acceleo traceability -->
+      <section id="acceleo-traceability">
+        <div class="page-header">
+          <h1>Traceability</h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Traceability</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              Acceleo contains a generation engine than can compute traceability informations. Thanks to those traceability information, you can see which model 
+              elements and which part of the generator has been used to generate a specific portion of generated text.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo traceability -->
+      
+      <!-- Acceleo perspective -->
+      <section id="acceleo-perspective">
+        <div class="page-header">
+          <h1>Perspective and views</h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Overrides view</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The overrides view will show you all the modules in your workspace and in your plugin that you can override and it will create a new quick fix to easily
+              override a specific template.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Result view</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The result view will display all the traceability information from the last generation where the traceabiility has been activated.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Generation patterns</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              The generation pattern view is a view dedicated to the creation of custom quick fixes to quickly create code following some design pattern for code generators.
+            </p>
+            
+            <p>
+              You can easily contribute to this view with new design pattern thanks to the dedicated extension point.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo perspective -->
+      
+      <!-- Acceleo ant/maven/pde -->
+      <section id="acceleo-ant-maven-pde">
+        <div class="page-header">
+          <h1>Ant, Maven, PDE</h1>
+        </div>
+        <div class="row">
+          <div class="span4 columns">
+            <h2>PDE Build</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              All Acceleo projects are Eclipse plugin projects and as such they can be easily deployed in another Eclipse instance thanks to the PDE build system. In all Acceleo
+              projects, Acceleo maintain a build.acceleo file used by PDE to compile Acceleo modules. Thanks to this mechanism you can deploy an Acceleo generator in another Eclipse
+              in a few clicks.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Ant</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              Acceleo provides the necessary Ant tasks to compile an Acceleo module and to launch a generation for all Acceleo generator.
+            </p>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="span4 columns">
+            <h2>Maven & Tycho</h2>
+          </div>
+          <div class="span12 columns">
+            <p>
+              Acceleo also provides a Maven and Tycho based "pom.xml" to build and Acceleo project in a Maven based workflow.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Acceleo ant/maven/pde -->
+    
+    </div>
+    <!-- Container -->
+    
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer">
+        <div class="container">
+          <p>Created by <a href="http://twitter.com/sbegaudeau" target="_blank">@sbegaudeau</a>. Copyright St&eacute;phane B&eacute;gaudeau.</p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    
+  </body>
+</html>
