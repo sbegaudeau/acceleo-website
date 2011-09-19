@@ -20,17 +20,18 @@ $().ready(function() {
     	var image = this;
     	var div = this.parentNode;
     	
-    	$(div).find(".poi-data").each(function() {
-    		var data = $.parseJSON($(this).attr("data"));
-    		$(div).append('<img src="../assets/images/poi.png" id="img-poi' + data.id + '" title="' + data.caption + '" />')
-    				.find("#img-poi" + data.id)
-    				.css({
-    					"top": ($(image).position().top + data.pos.y)+"px",
-    					"left": ($(image).position().left + data.pos.x)+"px"
-    				})
-    				.addClass("poi");
-    		$(div).find("ul").hide();
-    		
-    	});
+    	$(image).load(function() {
+    		$(div).find(".poi-data").each(function() {
+        		var data = $.parseJSON($(this).attr("data"));
+        		$(div).append('<img src="../assets/images/poi.png" id="img-poi' + data.id + '" title="' + data.caption + '" />')
+        				.find("#img-poi" + data.id)
+        				.css({
+        					"top": (($(image).height() + parseInt($(image).css("line-height").replace("px", "")))* -1) + data.pos.y,
+        					"left": data.pos.x
+        				})
+        				.addClass("poi");
+        		$(div).find("ul").hide();
+        	});
+        });
     });
 });
