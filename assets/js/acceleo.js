@@ -75,4 +75,8 @@ $().ready(function() {
 			img_.animate({marginTop : '0'}, 500);
 		});
 	});
+    
+    $(".coda-slider-navigation-button p").click(function (e) {
+    	return false;
+    });
 });
