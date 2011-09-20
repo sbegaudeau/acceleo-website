@@ -16,6 +16,22 @@ $().ready(function() {
         return false;
     });
     
+    $(".twipsy-link").each(function () {
+    	$(this).twipsy({
+    		"trigger": "hover"
+    	});
+    });
+    
+    $(".twipsy-link").hover(function () {
+    	$(this).twipsy("show");
+    }, function () {
+    	$(this).twipsy("hide");
+    });
+    
+    $(".twipsy-link").click(function (e) {
+    	return false;
+    });
+    
     $(".poi-image").each(function() {
     	var image = this;
     	var div = this.parentNode;
