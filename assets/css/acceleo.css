@@ -105,3 +105,19 @@ section {
        -moz-box-shadow: 0 0 12px #777;
             box-shadow: 0 0 12px #777;
 }
+.banner-image {
+	position: relative;
+	margin-bottom: 0px;
+	overflow: hidden;
+	-moz-border-radius: 2px;
+	-khtml-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+.banner-caption {
+	margin-top: -5px;
+	padding: 5px 10px;
+	background-color: #333;
+	color: #EEE;
+	border-top: 1px solid #666;
+}

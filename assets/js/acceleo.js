@@ -1,7 +1,7 @@
 $().ready(function() {
     $('#coda-slider-1').codaSlider({
         autoSlide: true,
-        autoSlideInterval: 3000,
+        autoSlideInterval: 4000,
         autoSlideStopWhenClicked: true,
         dynamicArrows: false,
         dynamicTabs: false
@@ -39,7 +39,7 @@ $().ready(function() {
     	$(image).load(function() {
     		$(div).find(".poi-data").each(function() {
         		var data = $.parseJSON($(this).attr("data"));
-        		$(div).append('<img src="../assets/images/poi.png" id="img-poi' + data.id + '" title="' + data.caption + '" />')
+        		$(div).append('<img src="../assets/images/poi.png" id="img-poi' + data.id + '" title="' + data.title + '" data-content="' + data.content + '" />')
         				.find("#img-poi" + data.id)
         				.css({
         					"top": (($(image).height() + parseInt($(image).css("line-height").replace("px", "")))* -1) + data.pos.y,
@@ -48,6 +48,31 @@ $().ready(function() {
         				.addClass("poi");
         		$(div).find("ul").hide();
         	});
+    		
+    		$(".poi").each(function () {
+    	    	$(this).popover({
+    	    		"trigger": "hover"
+    	    	});
+    	    });
+    	    
+    	    $(".poi").hover(function () {
+    	    	$(this).popover("show");
+    	    }, function () {
+    	    	$(this).popover("hide");
+    	    });
         });
     });
+    
+    $('.panel-wrapper').each(function(i) {
+		var img_ = $('img', this);
+		var img_height = img_.attr('height');
+		var p_height = $('p', this).outerHeight();
+		
+		$(this).height(img_height);
+		$(this).hover(function() {
+			img_.animate({marginTop : -p_height}, 500);
+		}, function() {
+			img_.animate({marginTop : '0'}, 500);
+		});
+	});
 });
