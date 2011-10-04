@@ -35,8 +35,8 @@ $().ready(function() {
     $(".poi-image").each(function() {
     	var image = this;
     	var div = this.parentNode;
-    	
-    	$(image).load(function() {
+    	// IE Specific fix to counter the lazy loading of pictures in IE
+    	$(image).attr({"src": $(image).attr("src") + "?random=" + (new Date()).getTime()}).load(function() {
     		$(div).find(".poi-data").each(function() {
         		var data = $.parseJSON($(this).attr("data"));
         		$(div).append('<img src="../assets/images/poi.png" id="img-poi' + data.id + '" title="' + data.title + '" data-content="' + data.content + '" />')
@@ -61,6 +61,7 @@ $().ready(function() {
     	    	$(this).popover("hide");
     	    });
         });
+    	
     });
     
     $('.panel-wrapper').each(function(i) {
