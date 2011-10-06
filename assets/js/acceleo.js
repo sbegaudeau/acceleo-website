@@ -35,8 +35,13 @@ $().ready(function() {
     $(".poi-image").each(function() {
     	var image = this;
     	var div = this.parentNode;
+    	
+    	
     	// IE Specific fix to counter the lazy loading of pictures in IE
     	$(image).attr({"src": $(image).attr("src") + "?random=" + (new Date()).getTime()}).load(function() {
+    		// The div must have the width of the image
+    		$(div).css({"width": $(image).width()});
+    		
     		$(div).find(".poi-data").each(function() {
         		var data = $.parseJSON($(this).attr("data"));
         		$(div).append('<img src="../assets/images/poi.png" id="img-poi' + data.id + '" title="' + data.title + '" data-content="' + data.content + '" />')
